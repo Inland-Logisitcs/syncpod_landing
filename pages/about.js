@@ -84,7 +84,7 @@ export default function About() {
           text-align: center;
           padding: 8rem 2rem;
           color: white;
-          background: url('syncpod_landing/mockup-app.png') no-repeat center center/contain;
+          background: url('/syncpod_landing/mockup-app.png') no-repeat center center/contain;
           background-color: #014055;
         }
 
