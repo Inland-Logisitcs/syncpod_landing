@@ -6,17 +6,17 @@ import StoreButtons from '../components/StoreButtons';
 export default function Home() {
   const services = [
     {
-      icon: '/delivery.svg',
+      icon: 'syncpod_landing/delivery.svg',
       title: 'Fast Delivery',
       description: 'We guarantee same-day delivery for all local packages. Our efficient logistics network ensures your package reaches its destination on time.',
     },
     {
-      icon: '/package.svg',
+      icon: 'syncpod_landing/package.svg',
       title: 'Secure Packaging',
       description: 'Your packages are handled with the utmost care. We provide secure packaging options to protect your items during transit.',
     },
     {
-      icon: '/route.svg',
+      icon: 'syncpod_landing/route.svg',
       title: 'Optimize Your Routes',
       description: 'Our smart algorithm finds the most efficient route, saving you time and fuel on every delivery.',
     },

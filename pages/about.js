@@ -7,25 +7,25 @@ export default function About() {
       title: "Download App",
       description: "Get the Syncpodd app from the App Store or Google Play.",
       align: "left",
-      icon: "/download.svg",
+      icon: "syncpod_landing/download.svg",
     },
     {
       title: "Register",
       description: "Create your account to access all features.",
       align: "right",
-      icon: "/register.svg",
+      icon: "syncpod_landing/register.svg",
     },
     {
       title: "Scan Packages",
       description: "Use the in-app scanner to add your packages.",
       align: "left",
-      icon: "/scan.svg",
+      icon: "syncpod_landing/scan.svg",
     },
     {
       title: "Optimize Route",
       description: "Let our smart algorithm find the most efficient route.",
       align: "right",
-      icon: "/route.svg",
+      icon: "syncpod_landing/route.svg",
     },
   ];
 
@@ -84,7 +84,7 @@ export default function About() {
           text-align: center;
           padding: 8rem 2rem;
           color: white;
-          background: url('/mockup-app.png') no-repeat center center/contain;
+          background: url('syncpod_landing/mockup-app.png') no-repeat center center/contain;
           background-color: #014055;
         }
 
