@@ -1,78 +1,217 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Head from 'next/head';
+import Image from 'next/image';
+import StoreButtons from '../components/StoreButtons';
 
 export default function Home() {
+  const services = [
+    {
+      icon: '/delivery.svg',
+      title: 'Fast Delivery',
+      description: 'We guarantee same-day delivery for all local packages. Our efficient logistics network ensures your package reaches its destination on time.',
+    },
+    {
+      icon: '/package.svg',
+      title: 'Secure Packaging',
+      description: 'Your packages are handled with the utmost care. We provide secure packaging options to protect your items during transit.',
+    },
+    {
+      icon: '/route.svg',
+      title: 'Optimize Your Routes',
+      description: 'Our smart algorithm finds the most efficient route, saving you time and fuel on every delivery.',
+    },
+  ];
+
   return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black`}
-    >
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the index.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs/pages/getting-started?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <div className="container">
+      <Head>
+        <title>SyncPOD - Your City, Your Schedule</title>
+        <meta name="description" content="Join SyncPOD and start earning on your own terms. Your City, Your Schedule." />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <main>
+        {/* Hero Section */}
+        <section className="hero">
+          <div className="hero-content">
+            <div className="hero-text">
+              <h1>Your City, Your Schedule.</h1>
+              <p>
+                SyncPOD connects you with local delivery opportunities. Work when you want, where you want, and take control.
+              </p>
+              <StoreButtons />
+            </div>
+            <div className="hero-mockup">
+              <Image src="/mockup-app.png" alt="SyncPOD App Mockup" layout="responsive" width={800} height={900} />
+            </div>
+          </div>
+        </section>
+
+        {/* Our Services Section */}
+        <section className="feature-section">
+          <h2 className="section-title">Our Services</h2>
+          <div className="feature-grid">
+            {services.map((service, index) => (
+              <div key={index} className="feature-card">
+                <img src={service.icon} alt={`${service.title} icon`} className="feature-icon" />
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="testimonials">
+          <h2 className="section-title">What Our Customers Say</h2>
+          <div className="testimonial-grid">
+            <div className="testimonial-card">
+              <p>"Fast & Secure Delivery is the best! I was impressed with the speed and professionalism of their service. Highly recommended!"</p>
+              <span>- John Doe</span>
+            </div>
+            <div className="testimonial-card">
+              <p>"I've been using their service for my business, and they have never disappointed. Reliable, secure, and always on time."</p>
+              <span>- Jane Smith</span>
+            </div>
+          </div>
+        </section>
       </main>
+
+      <style jsx>{`
+        .container {
+          background-color: #FFFFFF;
+          color: #212529;
+        }
+
+        main {
+          /* Styles removed to allow full-width sections */
+        }
+
+        .hero {
+          background-color: #014055;
+          padding: 4rem 2rem;
+          margin-bottom: 4rem;
+        }
+
+        .hero-content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 4rem;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .hero-text {
+          flex: 1;
+        }
+
+        .hero-text h1 {
+          font-size: 3.5rem;
+          font-weight: 700;
+          color: #FFFFFF;
+          margin-bottom: 1.5rem;
+        }
+
+        .hero-text p {
+          font-size: 1.2rem;
+          line-height: 1.6;
+          color: #FFFFFF;
+          margin-bottom: 2rem;
+        }
+
+        .hero-mockup {
+          flex: 1;
+        }
+
+        .feature-section {
+          background-color: #f0f4f8;
+          padding: 4rem;
+          border-radius: 16px;
+          max-width: 1200px;
+          margin: 4rem auto;
+          box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+        }
+
+        .testimonials {
+          padding: 4rem 2rem;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #212529;
+            margin-bottom: 3rem;
+        }
+
+        .feature-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+        }
+
+        .feature-card {
+            background-color: #FFFFFF;
+            padding: 2.5rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            height: 60px;
+            width: 60px;
+            margin-bottom: 1.5rem;
+            filter: none;
+        }
+
+        .feature-card h3 {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: #212529;
+          margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+          color: #6c757d;
+        }
+
+        .testimonials {
+            background-color: #FFFFFF;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background-color: #f8f9fa;
+            padding: 2.5rem;
+            border-radius: 12px;
+        }
+        
+        .testimonial-card p {
+            font-style: italic;
+            color: #6c757d;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-card span {
+            font-weight: 600;
+            color: #212529;
+        }
+
+      `}</style>
     </div>
   );
 }
