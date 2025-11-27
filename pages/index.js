@@ -42,7 +42,7 @@ export default function Home() {
               <StoreButtons />
             </div>
             <div className="hero-mockup">
-              <Image src="/mockup-app.png" alt="SyncPOD App Mockup" layout="responsive" width={800} height={900} />
+              <Image src="syncpod_landing/mockup-app.png" alt="SyncPOD App Mockup" layout="responsive" width={800} height={900} />
             </div>
           </div>
         </section>
