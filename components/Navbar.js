@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="container">
         <Link href="/" legacyBehavior>
           <a className="logo">
-            <Image src="syncpod_landing/syncpod_icon.png" alt="Syncpod Logo" width={40} height={40} />
+            <Image src="/syncpod_landing/syncpod_icon.png" alt="Syncpod Logo" width={40} height={40} />
             <span className="logo-text">SyncPOD</span>
           </a>
         </Link>
