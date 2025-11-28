@@ -11,17 +11,17 @@ export default function Home() {
   const t = useTranslations('IndexPage');
   const services = [
     {
-      icon: 'syncpod_landing/delivery.svg',
+      icon: 'delivery.svg',
       title: t('service1_title'),
       description: t('service1_description')
     },
     {
-      icon: 'syncpod_landing/package.svg',
+      icon: 'package.svg',
       title: t('service2_title'),
       description: t('service2_description')
     },
     {
-      icon: 'syncpod_landing/route.svg',
+      icon: 'route.svg',
       title: t('service3_title'),
       description: t('service3_description')
     },
@@ -47,7 +47,7 @@ export default function Home() {
               <StoreButtons />
             </div>
             <div className="hero-mockup">
-              <Image src="syncpod_landing/mockup-app.png" alt="SyncPOD App Mockup" layout="responsive" width={800} height={900} />
+              <Image src="/mockup-app.png" alt="SyncPOD App Mockup" layout="responsive" width={800} height={900} />
             </div>
           </div>
         </section>

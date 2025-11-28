@@ -12,25 +12,25 @@ export default function About() {
       title: t('step1_title'),
       description: t('step1_description'),
       align: "left",
-      icon: "/syncpod_landing/download.svg",
+      icon: "download.svg",
     },
     {
       title: t('step2_title'),
       description: t('step2_description'),
       align: "right",
-      icon: "/syncpod_landing/register.svg",
+      icon: "register.svg",
     },
     {
       title: t('step3_title'),
       description: t('step3_description'),
       align: "left",
-      icon: "/syncpod_landing/scan.svg",
+      icon: "scan.svg",
     },
     {
       title: t('step4_title'),
       description: t('step4_description'),
       align: "right",
-      icon: "/syncpod_landing/route.svg",
+      icon: "route.svg",
     },
   ];
 
@@ -88,7 +88,7 @@ export default function About() {
           text-align: center;
           padding: 8rem 2rem;
           color: white;
-          background: url('/syncpod_landing/mockup-app.png') no-repeat center center/contain;
+          background: url('mockup-app.png') no-repeat center center/contain;
           background-color: #014055;
         }
 
