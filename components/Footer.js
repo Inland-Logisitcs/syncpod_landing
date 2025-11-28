@@ -1,18 +1,22 @@
 
 import { FaGooglePlay, FaApple, FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
+import {useTranslations} from 'next-intl';
+import { getStaticProps } from '../lib/i18n';
 
+export { getStaticProps };
 export default function Footer() {
+  const t = useTranslations('FooterComp');
   return (
     <footer className="footer">
       <div className="footer-content">
 
         <div className="footer-section footer-brand">
           <h3>SyncPOD</h3>
-          <p>Your trusted partner for fast, secure, and reliable delivery services.</p>
+          <p>{t('descriptApp')}</p>
         </div>
 
         <div className="footer-section footer-socials">
-          <h4>Follow Us</h4>
+          <h4>{t('titleFollowUs')}</h4>
           <div className="social-icons">
             <a href="#" aria-label="Twitter"><FaTwitter /></a>
             <a href="#" aria-label="Facebook"><FaFacebook /></a>
@@ -21,19 +25,19 @@ export default function Footer() {
         </div>
 
         <div className="footer-section footer-store">
-          <h4>Get Our App</h4>
+          <h4>{t('getApp')}</h4>
           <div className="store-buttons-container">
             <a href="#" className="store-button">
               <FaGooglePlay className="store-icon" />
               <div className="store-text">
-                <span>GET IT ON</span>
+                <span>{t('getItOn')}</span>
                 <span>Google Play</span>
               </div>
             </a>
             <a href="#" className="store-button">
               <FaApple className="store-icon" />
               <div className="store-text">
-                <span>Download on the</span>
+                <span>{t('getItOn')}</span>
                 <span>App Store</span>
               </div>
             </a>
@@ -42,7 +46,7 @@ export default function Footer() {
 
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2025 SyncPOD. All rights reserved.</p>
+        <p>&copy; 2025 SyncPOD. {t('allRights')}</p>
       </div>
 
       <style jsx>{`

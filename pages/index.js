@@ -2,31 +2,36 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import StoreButtons from '../components/StoreButtons';
+import {useTranslations} from 'next-intl';
+import { getStaticProps } from '../lib/i18n';
+
+export { getStaticProps };
 
 export default function Home() {
+  const t = useTranslations('IndexPage');
   const services = [
     {
       icon: 'syncpod_landing/delivery.svg',
-      title: 'Fast Delivery',
-      description: 'We guarantee same-day delivery for all local packages. Our efficient logistics network ensures your package reaches its destination on time.',
+      title: t('service1_title'),
+      description: t('service1_description')
     },
     {
       icon: 'syncpod_landing/package.svg',
-      title: 'Secure Packaging',
-      description: 'Your packages are handled with the utmost care. We provide secure packaging options to protect your items during transit.',
+      title: t('service2_title'),
+      description: t('service2_description')
     },
     {
       icon: 'syncpod_landing/route.svg',
-      title: 'Optimize Your Routes',
-      description: 'Our smart algorithm finds the most efficient route, saving you time and fuel on every delivery.',
+      title: t('service3_title'),
+      description: t('service3_description')
     },
   ];
 
   return (
     <div className="container">
       <Head>
-        <title>SyncPOD - Your City, Your Schedule</title>
-        <meta name="description" content="Join SyncPOD and start earning on your own terms. Your City, Your Schedule." />
+        <title>{t('pageTitle')}</title>
+        <meta name="description" content={t('pageDescription')} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -35,9 +40,9 @@ export default function Home() {
         <section className="hero">
           <div className="hero-content">
             <div className="hero-text">
-              <h1>Your City, Your Schedule.</h1>
+              <h1>{t('heroTitle')}</h1>
               <p>
-                SyncPOD connects you with local delivery opportunities. Work when you want, where you want, and take control.
+                {t('heroSubtitle')}
               </p>
               <StoreButtons />
             </div>
@@ -49,7 +54,7 @@ export default function Home() {
 
         {/* Our Services Section */}
         <section className="feature-section">
-          <h2 className="section-title">Our Services</h2>
+          <h2 className="section-title">{t('servicesTitle')}</h2>
           <div className="feature-grid">
             {services.map((service, index) => (
               <div key={index} className="feature-card">
@@ -62,14 +67,14 @@ export default function Home() {
         </section>
 
         <section className="testimonials">
-          <h2 className="section-title">What Our Customers Say</h2>
+          <h2 className="section-title">{t('testimonialsTitle')}</h2>
           <div className="testimonial-grid">
             <div className="testimonial-card">
-              <p>"Fast & Secure Delivery is the best! I was impressed with the speed and professionalism of their service. Highly recommended!"</p>
+              <p>{t('testimonial1_text')}</p>
               <span>- John Doe</span>
             </div>
             <div className="testimonial-card">
-              <p>"I've been using their service for my business, and they have never disappointed. Reliable, secure, and always on time."</p>
+              <p>{t('testimonial2_text')}</p>
               <span>- Jane Smith</span>
             </div>
           </div>
