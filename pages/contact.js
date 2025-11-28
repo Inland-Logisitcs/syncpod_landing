@@ -113,7 +113,7 @@ export default function Contact() {
           position: relative;
           text-align: center;
           padding: 6rem 2rem;
-          background: url('desktop-banner.jpg') no-repeat center center/cover;
+          background: url('/syncpod_landing/desktop-banner.jpg') no-repeat center center/cover;
         }
 
         .hero-overlay {
