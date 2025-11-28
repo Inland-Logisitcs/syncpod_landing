@@ -1,34 +1,39 @@
 
 import Head from "next/head";
+import {useTranslations} from 'next-intl';
+import { getStaticProps } from '../lib/i18n';
+
+export { getStaticProps };
 
 export default function Contact() {
+  const t = useTranslations('ContactPage');
 
   const faqs = [
     {
-      question: "How it works?",
-      answer: "Our platform connects you with a network of reliable couriers. Simply enter your pickup and delivery details, and we'll handle the rest.",
+      question: t('faq1_question'),
+      answer: t('faq1_answer'),
     },
     {
-      question: "What can you deliver?",
-      answer: "We can deliver a wide range of items, from small documents to large packages. Prohibited items include illegal, hazardous, and dangerous goods.",
+      question: t('faq2_question'),
+      answer: t('faq2_answer'),
     },
     {
-      question: "How many packages you can set up for deliver?",
-      answer: "You can set up multiple deliveries at once through our web or mobile app. For bulk deliveries, we offer specialized business solutions.",
-    },
+      question: t('faq3_question'),
+      answer: t('faq3_answer'),
+    },    
     {
-      question: "Scan your packages that are out for deliver?",
-      answer: "Yes, you can track your packages in real-time using our app. You will receive notifications at every stage of the delivery process.",
+      question: t('faq4_question'),
+      answer: t('faq4_answer'),
     },
   ];
 
   return (
     <div className="bg-white text-black">
       <Head>
-        <title>Contact Us - Syncpodd</title>
+        <title>{t('pageTitle')} - Syncpodd</title>
         <meta
           name="description"
-          content="Get in touch with the Syncpodd team."
+          content={t('pageDescription')}
         />
       </Head>
 
@@ -36,13 +41,13 @@ export default function Contact() {
         <section className="contact-hero">
           <div className="hero-overlay"></div>
           <div className="hero-content">
-            <h1>Contact Us</h1>
-            <p>We'd love to hear from you. Drop us a line below.</p>
+            <h1>{t('heroTitle')}</h1>
+            <p>{t('heroSubtitle')}</p>
           </div>
         </section>
 
         <section className="faq">
-          <h2>Frequently Asked Questions</h2>
+          <h2>{t('faqTitle')}</h2>
           <div className="faq-grid">
             {faqs.map((faq, index) => (
               <div key={index} className="faq-item">
@@ -60,14 +65,14 @@ export default function Contact() {
                 <div className="email-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                 </div>
-                <h3>Contact Us</h3>
+                <h3>{t('contactCardTitle')}</h3>
               </div>
               <p>
-                For any inquiries, please feel free to email us at{' '}
+                {t('contactCardContent')}{' '}
                 <a href="mailto:eng@inlandlogistics.co" className="email-link">
                     eng@inlandlogistics.co
                 </a>
-                . We will get back to you as soon as possible.
+                {t('asSoonPossible')}
               </p>
             </div>
           </div>
@@ -78,20 +83,21 @@ export default function Contact() {
                     <div className="email-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-alert-triangle"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
                     </div>
-                    <h3>Report a Problem</h3>
+                    <h3>{t('reportCardTitle')}</h3>
                 </div>
                 <p>
-                If you encounter any issues with the app, please email us at{' '}
+                {t('reportCardContent')} ' '
                 <a href="mailto:eng@inlandlogistics.co" className="email-link">
                     eng@inlandlogistics.co
                 </a>
-                {' '}with:
+                ' ' with:
                 </p>
                 <ul className="problem-list">
-                <li>A description of the problem</li>
-                <li>Your device model and iOS version</li>
-                <li>Steps to reproduce the issue (if applicable)</li>
-                <li>Screenshots (if relevant)</li>
+                <li>{t('problemList1')}</li>
+                <li>{t('problemList2')}</li>
+                <li>{t('problemList3')}</li>
+                <li>{t('problemList4')}</li>
+
                 </ul>
             </div>
           </div>
@@ -107,7 +113,7 @@ export default function Contact() {
           position: relative;
           text-align: center;
           padding: 6rem 2rem;
-          background: url('/syncpod_landing/desktop-banner.jpg') no-repeat center center/cover;
+          background: url('desktop-banner.jpg') no-repeat center center/cover;
         }
 
         .hero-overlay {

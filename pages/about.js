@@ -1,41 +1,46 @@
 
 import Head from "next/head";
+import {useTranslations} from 'next-intl';
+import { getStaticProps } from '../lib/i18n';
+
+export { getStaticProps };
 
 export default function About() {
+  const t = useTranslations('AboutPage');
   const gettingStartedSteps = [
     {
-      title: "Download App",
-      description: "Get the Syncpodd app from the App Store or Google Play.",
+      title: t('step1_title'),
+      description: t('step1_description'),
       align: "left",
-      icon: "/syncpod_landing/download.svg",
+      icon: "download.svg",
     },
     {
-      title: "Register",
-      description: "Create your account to access all features.",
+      title: t('step2_title'),
+      description: t('step2_description'),
       align: "right",
-      icon: "/syncpod_landing/register.svg",
+      icon: "register.svg",
     },
     {
-      title: "Scan Packages",
-      description: "Use the in-app scanner to add your packages.",
+      title: t('step3_title'),
+      description: t('step3_description'),
       align: "left",
-      icon: "/syncpod_landing/scan.svg",
+      icon: "scan.svg",
     },
     {
-      title: "Optimize Route",
-      description: "Let our smart algorithm find the most efficient route.",
+      title: t('step4_title'),
+      description: t('step4_description'),
       align: "right",
-      icon: "/syncpod_landing/route.svg",
+      icon: "route.svg",
     },
   ];
 
   return (
     <div className="bg-white text-black">
       <Head>
-        <title>About Us - Syncpodd</title>
+        <title>{t('pageTitle')} - Syncpodd</title>
         <meta
           name="description"
-          content="Learn more about Syncpodd and our mission to revolutionize the logistics industry."
+          content={t('pageDescription')}
         />
       </Head>
 
@@ -45,21 +50,20 @@ export default function About() {
           <div className="preview-content">
             <h2>SyncPOD</h2>
             <p>
-              Experience the power of seamless logistics management with our
-              intuitive and powerful app.
+              {t('appPreviewSubtitle')}
             </p>
           </div>
         </section>
 
         <section className="mission mission-card">
-          <h2>Our Mission</h2>
+          <h2>{t('missionTitle')}</h2>
           <p>
-            To provide the fastest, most reliable delivery service, connecting people and businesses with what they need, when they need it.
+            {t('missionContent')}
           </p>
         </section>
 
         <section className="getting-started">
-          <h2>Getting Started</h2>
+          <h2>{t('gettingStartedTitle')}</h2>
           <div className="steps-timeline">
             {gettingStartedSteps.map((step, index) => (
               <div key={index} className={`step-card ${step.align}`}>
@@ -84,7 +88,7 @@ export default function About() {
           text-align: center;
           padding: 8rem 2rem;
           color: white;
-          background: url('/syncpod_landing/mockup-app.png') no-repeat center center/contain;
+          background: url('/mockup-app.png') no-repeat center center/contain;
           background-color: #014055;
         }
 
