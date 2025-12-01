@@ -1,0 +1,49 @@
+
+.main-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .section-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    margin-bottom: 3rem;
+    overflow: hidden; /* To contain the child elements */
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #e9ecef;
+    color: #014055;
+  }
+  .section-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 0 1rem;
+  }
+  .inner-content {
+      padding: 2rem;
+  }
+  .item-card {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .item-card:last-child {
+      margin-bottom: 0;
+  }
+  .item-card h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #343a40;
+    margin: 0 0 0.75rem 0;
+  }
+  .item-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #495057;
+    margin: 0;
+  }

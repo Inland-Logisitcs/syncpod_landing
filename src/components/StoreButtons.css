@@ -1,0 +1,42 @@
+.store-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.store-button {
+  color: #fff;
+  background-color: #014055;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  align-items: center;
+  padding: .5rem 1.5rem;
+  text-decoration: none;
+  transition: background-color .3s;
+  display: flex;
+}
+.store-button:hover {
+  background-color: white;
+  color: #014055;
+}
+.apple .icon {
+  font-size: 1.4rem;
+  margin-right: 0.5rem;
+}
+.google .icon {
+  font-size: 1.4rem;
+  margin-right: 0.5rem;
+}
+.text-left {
+  display: flex;
+  flex-direction: column;
+}
+.text-left span {
+  text-align: left;
+  line-height: 1.2;
+}
+.small-text {
+  font-size: 0.8rem;
+}
+.font-bold {
+  font-weight: bold;
+  font-size: 1.2rem;
+}

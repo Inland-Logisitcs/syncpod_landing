@@ -89,10 +89,10 @@
     "compliance4_content": "Nuestras prácticas de privacidad están diseñadas para estar en línea con los requisitos de privacidad de las tiendas de aplicaciones. Por favor consulta nuestra Política de Privacidad para más detalles."
   },
 "ContactPage": {
-    "pageTitle": "Contáctanos - Syncpod app",
-    "pageDescription": "Ponte en contacto con el equipo de la app Syncpod.",
+    "pageTitle": "Contáctanos",
+    "pageDescription": "Estamos aquí para ayudar. Encuentra respuestas a preguntas comunes o ponte en contacto con nuestro equipo de soporte.",
     "heroTitle": "Contáctanos",
-    "heroSubtitle": "Nos encantaría saber de ti. Escríbenos a continuación.",
+    "heroSubtitle": "Estamos aquí para ayudar. Encuentra respuestas a preguntas comunes o ponte en contacto con nuestro equipo de soporte.",
     "faqTitle": "Preguntas Frecuentes",
     "faq1_question": "¿Cómo funciona?",
     "faq1_answer": "Nuestra plataforma te conecta con una red de mensajeros confiables. Simplemente ingresa los detalles de recogida y entrega, y nosotros nos encargamos del resto.",
@@ -100,16 +100,16 @@
     "faq2_answer": "Podemos entregar una amplia gama de artículos, desde documentos pequeños hasta paquetes grandes. Los artículos prohibidos incluyen productos ilegales, peligrosos y riesgosos.",
     "faq3_question": "¿Cuántos paquetes se pueden programar para entregar?",
     "faq3_answer": "Puedes programar múltiples entregas a la vez a través de nuestra aplicación web o móvil. Para entregas masivas, ofrecemos soluciones comerciales especializadas.",
-    "faq4_question": "¿Escanear sus paquetes que están en reparto?",
-    "faq4_answer": "Sí, puedes rastrear tus paquetes en tiempo real usando nuestra aplicación. Recibirás notificaciones en cada etapa del proceso de entrega.",
-    "contactCardTitle": "Contáctanos",
-    "contactCardContent": "Para cualquier consulta, no dudes en enviarnos un correo electrónico a",
+    "faq4_question": "¿Listo para optimizar tus entregas?",
+    "faq4_answer": "Con nuestra app, puedes escanear tus paquetes en tiempo real y realizar entregas eficientes siguiendo rutas predefinidas para cada reparto.",
+    "contactCardTitle": "Ponte en Contacto",
+    "contactCardContent": "¿Tienes alguna pregunta o necesitas ayuda? Envíanos un correo electrónico a",
     "reportCardTitle": "Reportar un Problema",
-    "reportCardContent": "Si encuentras algún problema con la aplicación, por favor envíanos un correo electrónico a",
-    "asSoonPossible": ". Te responderemos lo mas pronto posible.",
+    "reportCardContent": "Si encuentras algún problema, por favor repórtalo a",
+    "asSoonPossible": ", y nos pondremos en contacto contigo lo antes posible.",
     "problemList1": "Una descripción del problema",
-    "problemList2": "El modelo de tu dispositivo y la versión de iOS",
-    "problemList3": "Pasos para reproducir el problema (si aplica)",
-    "problemList4": "Capturas de pantalla (si es relevante)"
+    "problemList2": "El dispositivo y el navegador que estás utilizando",
+    "problemList3": "Tu ID de POD (si corresponde)",
+    "problemList4": "Capturas de pantalla o grabaciones de pantalla"
   }
 }
