@@ -3,7 +3,7 @@ name: Deploy React Vite to GitHub Pages
 on:
   push:
     branches:
-      - master  # or your default branch
+      - main  # or your default branch
 
 jobs:
   build-and-deploy:
@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22'  # specify your node version
+          node-version: '22'
 
       - name: Install dependencies
         run: npm install
@@ -24,11 +24,15 @@ jobs:
       - name: Build Vite project
         run: npm run build
 
+      - name: Upload build artifacts for debugging
+        uses: actions/upload-artifact@v3
+        with:
+          name: built-site
+          path: dist
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: dist
           publish_branch: gh-pages
-          # Optional: add a cname if needed
-          # cname: your-custom-domain.com
