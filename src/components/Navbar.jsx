@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import iconApp from '../assets/img/syncpod_icon.png';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -15,7 +16,7 @@ const Navbar = () => {
       <div className="container">
   
         <Link to="/" className="logo">
-          <img src="/syncpod_icon.png" alt="Syncpod Logo" width={40} height={40} />
+          <img src={iconApp} alt="Syncpod Logo" width={40} height={40} />
           <span className="logo-text">SyncPOD</span>
         </Link>
         <div className="nav-links">
