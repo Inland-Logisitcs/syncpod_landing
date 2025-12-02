@@ -40,3 +40,23 @@
   font-weight: bold;
   font-size: 1.2rem;
 }
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .store-buttons {
+    flex-direction: column; /* stack buttons vertically */
+    gap: 0.5rem; /* reduce gap if desired */
+  }
+
+  .store-button {
+    width: 100%; /* make buttons full width for easier tapping */
+    padding: 0.75rem;
+    font-size: 1rem; /* slightly smaller font size if needed */
+  }
+
+  /* Optional: adjust icon size or other styles if necessary */
+  .apple .icon,
+  .google .icon {
+    font-size: 1.2rem;
+  }
+}

@@ -15,7 +15,7 @@ main {
   display: flex;
   padding: 20px; /* optional for spacing */
   display: flex;
-  flex-direction: row !important; /* Ensure items are in a row */
+  flex-direction: row ; /* Ensure items are in a row */
   justify-content: space-between;
   align-items: center;
   gap: 2rem; 
@@ -142,13 +142,28 @@ img {
 }
 
 @media (max-width: 768px) {
+.hero {
+  padding: 0px;
+}
+
   .hero-content {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 2rem;
+    padding: 0px; 
     text-align: center;
   }
 
   .hero-text h1 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
+    padding: 0px;
   }
+
+  .hero-text p {
+  font-size: 1.0rem;
+  line-height: 1.6;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+  padding-left: 0px;
+  padding-right: 0px;
+}
 }
