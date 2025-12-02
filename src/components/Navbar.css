@@ -48,3 +48,38 @@
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
 }
+
+.menu-toggle {
+  display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  /* Show the hamburger button on small screens */
+  .menu-toggle {
+    display: block;
+    position: absolute; /* position it as needed, e.g., top right */
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+
+  }
+
+  /* Style for nav links to be hidden/shown on mobile */
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #014055;
+    flex-direction: column;
+    width: 200px;
+    padding: 1rem;
+    display: none; /* hidden by default on mobile */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  .nav-links.show {
+    display: flex; /* show when toggled */
+  }
+}
