@@ -20,10 +20,10 @@ const Navbar = () => {
           <span className="logo-text">SyncPOD</span>
         </Link>
         <div className="nav-links">
-          <Link to="/">{t('NavbarComp.homeLink')}</Link>
-          <Link to="/about">{t('NavbarComp.aboutLink')}</Link>
-          <Link to="/contact">{t('NavbarComp.contactLink')}</Link>
-          <Link to="/terms">{t('NavbarComp.termsLinks')}</Link>
+          <Link to="/syncpod_landing">{t('NavbarComp.homeLink')}</Link>
+          <Link to="/syncpod_landing/about">{t('NavbarComp.aboutLink')}</Link>
+          <Link to="/syncpod_landing/contact">{t('NavbarComp.contactLink')}</Link>
+          <Link to="/syncpod_landing/terms">{t('NavbarComp.termsLinks')}</Link>
         </div>
         <div className="language-switcher">
           <select onChange={handleLanguageChange} defaultValue={i18n.language}>
