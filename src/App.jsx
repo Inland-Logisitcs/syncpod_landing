@@ -12,7 +12,7 @@ import TermsPage from './pages/TermsPage';
 const App = () => {
   return (
     <I18nextProvider i18n={i18n}>
-      <Router basename="/syncpod_landing">
+      <Router>
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
